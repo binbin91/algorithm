@@ -11,3 +11,8 @@ def aa(root):
         res = left + right + 1 
         return res
     return recur(root)
+
+# 精简版
+def bb(root):
+    if not root: return 0
+    return 1 + bb(root.left) + bb(root.right)

@@ -4,12 +4,22 @@
 def aa(s):
     stack = []
     for i in s:
-        if i not in {"+", "-", "*", "/"}:
-            stack.append(i)
-        else:
-            f, s = stack.pop(), stack.pop()
-            stack.append(int(eval('{} {} {}'.format(f, i, s))))
-    return int(stack.pop())
+        try:
+            stack.append(int(i))
+        except:
+            n2, n1 = stack.pop(), stack.pop()
+            stack.append(cal(n1, n2, i))
+    return stack[0]
+
+def cal(n1, n2, op):
+    if op == '+':
+        return n1 + n2
+    elif op == '-':
+        return n1 - n2
+    elif op == '*':
+        return n1 * n2
+    elif op == '/':
+        return int(n1/float(n2))
 
 
 if __name__ == "__main__":
