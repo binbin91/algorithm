@@ -13,9 +13,9 @@ def aa(inorder, postorder):
     in_left = inorder[:idx]
     in_right = inorder[idx+1:]
     
-    # 切割后序数组，得到后序数组左右部分
-    po_left = postorder[:len(postorder)]
-    po_right = postorder[len(postorder):len(postorder)-1]   
+    # 切割后序数组，得到后序数组左右部分, PS: 中序数组大小要跟后序数组大小相同
+    po_left = postorder[:len(in_left)]
+    po_right = postorder[len(in_left):len(postorder)-1]   
 
     # 递归
     root_left = aa(in_left, po_left)

@@ -13,9 +13,9 @@ def aa(preorder, inorder):
     in_left = inorder[:idx]
     in_right = inorder[idx+1:]
     
-    # 切割前序数组得到左右部分
-    pre_left = preorder[1:1+len(preorder)]
-    pre_right = preorder[1+len(preorder):]
+    # 切割前序数组得到左右部分, PS:中序数组大小一定要跟前序数组大小相同
+    pre_left = preorder[1:1+len(in_left)]
+    pre_right = preorder[1+len(in_left):]
 
     # 递归
     root_left = aa(pre_left, in_left)
