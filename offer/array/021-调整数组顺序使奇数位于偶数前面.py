@@ -1,22 +1,14 @@
 # -*- coding: utf-8 -*-
 
-def reOrderArray(array):
-    odd_cnt = 0
-    res = [0] * len(array)
-    for i in array:
-        if i % 2 != 0:
-           odd_cnt += 1
 
-    odd_i = 0
-    even_i = odd_cnt
-    for i in range(len(array)):
-        if array[i] % 2 != 0:
-            res[odd_i] = array[i]
-            odd_i += 1
-        else:
-            res[even_i] = array[i]
-            even_i += 1
-    return res
+def aa(nums):
+    i, j = 0, len(nums) - 1
+    while i < j:
+        while i < j and nums[i] & 1 == 1: i += 1
+        while i < j and nums[j] & 1 == 0: j -= 1
+        nums[i], nums[j] = nums[j], nums[i]
+    return nums
+
 
 if __name__ == "__main__":
     array = [1,2,3,4]

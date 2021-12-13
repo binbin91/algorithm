@@ -7,8 +7,8 @@
 
 def aa(root, val):
     if not root or root.val == val: return root
-    if root.val > val: aa(root.left, val)
-    if root.val < val: aa(root.right, val)
+    if root.val > val: return aa(root.left, val)
+    if root.val < val: return aa(root.right, val)
 
 def bb(root, val):
     while root:

@@ -5,8 +5,8 @@ class MedianFinder:
         self.A, self.B = [], []
     def addNum(self, num):
         if len(self.A) != len(self.B):
-            heappush(self.B, -heappushpop(self.A, num)
+            heappush(self.B, -heappushpop(self.A, num))
         else:
-            heappush(self.A, -heappushpop(self.B, -num)
+            heappush(self.A, -heappushpop(self.B, -num))
     def findMedian(self):
         return self.A[0] if len(self.A) != len(self.B) else (self.A[0] - self.B[0])/2.0

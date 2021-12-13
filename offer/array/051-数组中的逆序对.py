@@ -1,48 +1,29 @@
 # -*- coding: utf-8 -*-
 
-def InversePairs(data):
-    if len(data) > 1:
-        print data
-        mid = len(data) / 2
-        left_half = data[:mid]
-        print 'left half:', left_half
-        right_half = data[mid:]
-        print 'right half:', right_half
-        left_count = InversePairs(left_half)%1000000007
-        right_count = InversePairs(right_half)%1000000007
-        i,j,k,count = len(left_half)-1,len(right_half)-1,len(data)-1,0
-        print i,j,k,count
-        while i >= 0 and j >= 0:
-            if left_half[i] < right_half[j]:
-                data[k] = right_half[j] 
-                j = j - 1
-                k = k - 1
+def aa(nums):
+    def merge_sort(l, r):
+        if l >= r: return 0
+        m = (l + r) // 2
+        res = merge_sort(l, m) + merge_sort(m + 1, r)
+        i, j = l, m + 1
+        tmp[l:r + 1] = nums[l:r + 1]
+        for k in range(l, r + 1):
+            if i == m + 1:
+                nums[k] = tmp[j]
+                j += 1
+            elif j == r + 1 or tmp[i] <= tmp[j]:
+                nums[k] = tmp[i]
+                i += 1
             else:
-                data[k] = left_half[i]
-                count += (j+1)
-                print count
-                i = i - 1
-                k = k - 1
-            print 'while 1, data:', data
-        while i >= 0:
-            data[k] = left_half[i]
-            k = k - 1
-            i = i - 1
-            print 'while 2, data:', data
-        while j>=0:
-            data[k] = right_half[j]
-            k = k - 1
-            j = j - 1
-            print 'while 3, data:', data
-        print 'data:', data
-        print 'count:', count
-        print 'left_count:', left_count
-        print 'right_count:', right_count
-        return (count + left_count + right_count)%1000000007
-    else:
-        return 0
+                nums[k] = tmp[j]
+                j += 1
+                res += m - i + 1 # 统计逆序对
+        return res
+        
+    tmp = [0] * len(nums)
+    return merge_sort(0, len(nums) - 1)
 
 
 if __name__ == "__main__":
     array = [1,2,3,4,5,6,7,0] 
-    print InversePairs(array)
+    print aa(array)

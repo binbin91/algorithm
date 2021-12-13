@@ -20,7 +20,7 @@ def aa(root):
             if cnt == max_cnt: res.append(cur.val)
             if cnt > max_cnt: 
                 max_cnt = cnt
-                res.clear()
+                res = []
                 res.append(cur.val)
             pre = cur
             cur = cur.right

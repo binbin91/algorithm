@@ -5,20 +5,20 @@
 #  2. 右子树中的所有节点的值 > 根节点的值
 #  3. 它的左右子树也分别为二叉搜索树
 
-def aa(root, val):
+def aa(root, key):
     if not root: return root
-    if root.val = val:
+    if root.val = key:
         # 左右都为空, 删除节点，返回空为根节点
         if not root.left and not root.right:
             del root
             return
         # 左孩子为空右孩子不为空, 删除节点，右孩子补位，返回右孩子为根节点
-        elif not root.left and root.right:
+        if not root.left and root.right:
             tmp, root = root, root.right
             del tmp
             return root
         # 右孩子为空左孩子不为空, 删除节点，左孩子补位，返回左孩子为根节点
-        elif root.left and not root.right:
+        if root.left and not root.right:
             tmp, root = root, root.left
             del tmp
             return root
@@ -29,6 +29,6 @@ def aa(root, val):
             v.left, tmp, root = root.left, root, root.right
             del tmp
             return root
-    if root.val > val: root.left = aa(root.left, val)
-    if root.val < val: root.right = aa(root.right, val) 
+    if root.val > key: root.left = aa(root.left, key)
+    if root.val < key: root.right = aa(root.right, key) 
     return root

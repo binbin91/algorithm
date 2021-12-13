@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 def matrix(array):
+    if not array: return []
     l, r, t, b, res = 0, len(array[0])-1, 0, len(array)-1, []
     while True:
         for i in range(l, r+1):

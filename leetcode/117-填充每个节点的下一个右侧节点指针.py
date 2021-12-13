@@ -7,8 +7,8 @@ def aa(root):
     if not root: return []
     queue = deque([root])
     while queue: 
-        n, tail = len(queue), None
-        for _ in range(n):
+        tail = None
+        for _ in range(len(queue)):
             node = queue.pop(0)
             if tail: tai.next = node
             tail = node
