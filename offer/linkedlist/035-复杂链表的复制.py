@@ -29,10 +29,8 @@ def aa(head):
     # 3. 拆分链表
     cur = res = head.next
     pre = head
-    while cur.next
-        pre.next = pre.next.next
-        cur.next = cur.next.next
-        pre = pre.next
-        cur = cur.next
+    while cur.next:
+        pre.next, cur.next = pre.next.next, cur.next.next
+        pre, cur = pre.next, cur.next
     pre.next = None
     return res 

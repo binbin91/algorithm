@@ -18,6 +18,6 @@ def aa(inorder, postorder):
     po_right = postorder[len(in_left):len(postorder)-1]   
 
     # 递归
-    root_left = aa(in_left, po_left)
-    root_right = aa(in_right, po_right)
+    root.left = aa(in_left, po_left)
+    root.right = aa(in_right, po_right)
     return root

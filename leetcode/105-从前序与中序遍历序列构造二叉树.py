@@ -18,6 +18,6 @@ def aa(preorder, inorder):
     pre_right = preorder[1+len(in_left):]
 
     # 递归
-    root_left = aa(pre_left, in_left)
-    root_right = aa(pre_right, in_right)
+    root.left = aa(pre_left, in_left)
+    root.right = aa(pre_right, in_right)
     return root
