@@ -7,6 +7,21 @@
 # 4. 确定遍历顺序
 # 5. 举例推导数组
 
+# 背包递推公式
+# 问能否装满背包 or 最多装多少: dp[j] = max(dp[j], dp[j-nums[i]] + nums[i])
+# 问装满背包有几种方法: dp[j] += dp[j-nums[i]]
+# 问背包装满最大价值: dp[j] = max(dp[j], dp[j-weight[i]] + value[i])
+# 问装满背包所有物品的最小个数: dp[j] = min(dp[j], dp[j-coins[i]] + 1)
+
+# 遍历顺序
+# 01背包: 
+#   二维dp数组两种遍历方式都可以, 但内层for循环是从小到大
+#   一维dp数组只能先遍历物品再遍历背包, 内层for循环是从大到小
+# 完全背包:
+#   求组合数, 先遍历物品再遍历背包
+#   求排列数, 先遍历背包再遍历物品
+#   求最小数, 都可以
+
 # 二维数组
 def aa(bag_size, weight, v):
     rows, cols = len(weight), bag_size + 1
