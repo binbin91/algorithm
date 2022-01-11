@@ -1,5 +1,11 @@
 # -*- coding: utf-8 -*-
 
+# Carl哥,动规五部曲:
+# 1. 确定dp数组以及下标含义
+# 2. 确定递推公式
+# 3. dp数组如何初始化
+# 4. 确定遍历顺序
+# 5. 举例推导数组
 
 def aa(obstacleGrid):
     m, n = len(obstacleGrid), len(obstacleGrid[0])
