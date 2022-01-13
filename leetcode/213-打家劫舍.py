@@ -12,8 +12,8 @@ def rob(nums):
     n = len(nums)
     if n == 0: return 0
     if n == 1: return nums[0]
-    res1 = aa(nums, 0, n - 2)
-    res2 = aa(nums, 1, n - 1)
+    res1 = aa(nums, 0, n - 2)  # 考虑包含首元素, 不包含尾元素
+    res2 = aa(nums, 1, n - 1)  # 考虑包含尾元素，不包含首元素
     return max(res1, res2)
 
 def aa(nums, start, end):
