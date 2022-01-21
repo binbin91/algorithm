@@ -9,7 +9,7 @@
 
 def aa(nums, target):
     sv = sum(nums)
-    if target > sv or (sv + target) % 2 == 1: return 0
+    if abs(target) > sv or (sv + target) % 2 == 1: return 0
     bs = (sv + target) // 2
     dp = [0] * (bs + 1)
     dp[0] = 1

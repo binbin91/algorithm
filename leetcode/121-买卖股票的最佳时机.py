@@ -27,7 +27,7 @@ def aa(prices):
     # 第i天不持有股票所得最多现金
     #   第i-1天不持有股票, 保持现状即所得现金就是昨天不持有股票的所得现金, dp[i-1][1]
     #   第i天卖入股票, 所得现金就是按照今天股票卖出后所得现金, dp[i-1][0] + prices[i]
-    #   那么dp[i][0] = max(dp[i-1][1], dp[i-1][0] + prices[i])
+    #   那么dp[i][1] = max(dp[i-1][1], dp[i-1][0] + prices[i])
     for i in range(1, length):
         dp[i][0] = max(dp[i-1][0], -prices[i])
         dp[i][1] = max(dp[i-1][1], dp[i-1][0] + prices[i])
