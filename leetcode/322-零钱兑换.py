@@ -8,7 +8,7 @@
 # 5. 举例推导数组
 
 def aa(coins, amount):
-    # dp数组, 凑成总金额j货币组合数为dp[j]
+    # dp数组, 凑成总金额j所需货币的最少个数为dp[j]
     dp = [amount + 1] * (amount + 1) 
     # dp数组初始化, 凑成总金额0的货币组合数为1
     dp[0] = 0
@@ -16,7 +16,11 @@ def aa(coins, amount):
     # 本题求钱币最小个数(完全背包), 两种for循环都不会影响最终结果
     for i in coins:
         for j in range(i, amount+1):
-            dp[j] = min(dp[j], dp[j-i] + 1)  # 递推公式
+            # 递推公式
+            # 得到dp[j], 只有一个来源dp[j - coins[i]]
+            # 凑足金额j - coins[i]的最少个数为dp[j - coins[i]], 那么只需加上coins[i] 即dp[j - coins[i]] + 1
+            # 所以dp[j]要取所有dp[j - coins[i]] + 1中最小的，即dp[j] = min(dp[j-coins[i]] + 1, dp[j])
+            dp[j] = min(dp[j], dp[j-i] + 1)
     return dp[amount] if dp[amount] < amount + 1 else -1
 
 
