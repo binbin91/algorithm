@@ -17,7 +17,7 @@ def aa(s):
         dp[i][i] = True
 
     for j in range(1, n):
-        for i in range(0, i):
+        for i in range(0, j):
             if s[i] != s[j]:
                 dp[i][j] = False 
             else:
