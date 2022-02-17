@@ -23,6 +23,7 @@
 - [28-实现strStr](https://github.com/binbin91/algorithm/blob/main/leetcode/28-实现strStr.py)
 - [31-下一个排列](https://github.com/binbin91/algorithm/blob/main/leetcode/31-下一个排列.py)
 - [32-最长有效括号](https://github.com/binbin91/algorithm/blob/main/leetcode/32-最长有效括号.py)
+- [33-搜索旋转排序数组](https://github.com/binbin91/algorithm/blob/main/leetcode/33-搜索旋转排序数组.py)
 - [53-最大子序和](https://github.com/binbin91/algorithm/blob/main/leetcode/53-最大子序和.py)
 - [59-螺旋矩阵](https://github.com/binbin91/algorithm/blob/main/leetcode/59-螺旋矩阵.py)
 - [62-不同路径](https://github.com/binbin91/algorithm/blob/main/leetcode/62-不同路径.py)
