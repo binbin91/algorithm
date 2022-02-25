@@ -8,11 +8,12 @@
 # 5. 举例推导数组
 
 def aa(nums):
-    imax, imin, res = 1, 1, float("-inf")
-    for n in nums:
+    imax = imin = res = nums[0] 
+    for i in range(1, len(nums)):
         # 递推公式, 遍历数组计算最大值imax和最小值imin
-        imax = max(imax * n, imin * n, n)
-        imin = min(imax * n, imin * n, n)
+        mx, mi = imax, imin
+        imax = max(mx * nums[i], mi * nums[i], nums[i])
+        imin = min(mx * nums[i], mi * nums[i], nums[i])
         res = max(res, imax)
     return res
 

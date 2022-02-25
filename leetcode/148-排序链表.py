@@ -2,7 +2,7 @@
 
 
 def aa(head):
-    if not (head or head.next): return head
+    if not head or not head.next: return head
     # 快慢指针, 找到中间点
     f, s = head.next, head
     while f and f.next:
