@@ -148,6 +148,7 @@
 - [589-N叉树的前序遍历](https://github.com/binbin91/algorithm/blob/main/leetcode/589-N叉树的前序遍历.py)
 - [590-N叉树的后序遍历](https://github.com/binbin91/algorithm/blob/main/leetcode/590-N叉树的后序遍历.py)
 - [617-合并二叉树](https://github.com/binbin91/algorithm/blob/main/leetcode/617-合并二叉树.py)
+- [621-任务调度器](https://github.com/binbin91/algorithm/blob/main/leetcode/621-任务调度器.py)
 - [637-二叉树的层平均值](https://github.com/binbin91/algorithm/blob/main/leetcode/637-二叉树的层平均值.py)
 - [647-回文子串](https://github.com/binbin91/algorithm/blob/main/leetcode/647-回文子串.py)
 - [654-最大二叉树](https://github.com/binbin91/algorithm/blob/main/leetcode/654-最大二叉树.py)
