@@ -108,6 +108,7 @@
 - [287-寻找重复数](https://github.com/binbin91/algorithm/blob/main/leetcode/287-寻找重复数.py)
 - [300-最长递增子序列](https://github.com/binbin91/algorithm/blob/main/leetcode/300-最长递增子序列.py)
 - [309-最佳买卖股票时机含冷冻期](https://github.com/binbin91/algorithm/blob/main/leetcode/309-最佳买卖股票时机含冷冻期.py)
+- [312-戳气球](https://github.com/binbin91/algorithm/blob/main/leetcode/312-戳气球.py)
 - [322-零钱兑换](https://github.com/binbin91/algorithm/blob/main/leetcode/322-零钱兑换.py)
 - [328-奇偶链表](https://github.com/binbin91/algorithm/blob/main/leetcode/328-奇偶链表.py)
 - [337-打家劫舍](https://github.com/binbin91/algorithm/blob/main/leetcode/337-打家劫舍.py)
