@@ -18,7 +18,7 @@ def aa(head):
 
 # 快慢指针 + 反转链表
 def bb(head):
-    if not (head and head.next): return True
+    if not head.next: return True
     f, s = head, head
     while f and f.next:
         pre, f, s = s, f.next.next, s.next
