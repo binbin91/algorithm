@@ -14,6 +14,7 @@ def aa(root):
             cur = cur.left
         else:
             cur = stack.pop()
+            # 判断当前节点和前继节点的大小关系是否满足递增关系
             if pre and cur.val <= pre.val:
                 return False
             pre = cur
