@@ -1,12 +1,23 @@
 # -*- coding: utf-8 -*-
 
+# 解体思路:
+#   题目数组是有序数组，且无重复元素，故使用二分查找法
+#   二分查找边界条件, 选择左闭右开(不包含右区间)
+#   right赋值: 左闭右闭right = len(nums)-1, 左闭右开right = len(nums)
+#   若nums[mid] > target, 那下一个搜索左区间是不包含nums[mid]对应数值, 所以right = mid
+#   若nums[mid] < target, mid不是target, 那下一个搜索区间是不能包含这个mid, 所以left = mid + 1  
+
+
 def aa(nums, target):
-    i, j = 0, len(nums)
-    while i < j:
-        m = (i + j) / 2
-        if nums[m] < target: i = m + 1 
-        elif nums[m] > target: j = m
-        else: return m
+    left, right = 0, len(nums)
+    while left < right:
+        mid = (left + right) // 2
+        if nums[mid] > target:
+            right = mid
+        elif nums[mid] < target:
+            left = mid + 1
+        else:
+            return mid
     return -1
 
 
