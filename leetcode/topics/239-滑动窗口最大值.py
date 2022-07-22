@@ -2,6 +2,12 @@
 
 from collections import deque
 
+# 解体思路
+#   利用双端队列记录当前窗口元素索引
+#   若队列最左侧索引不在窗口范围内则弹出,
+#   通过循环确保队列最左侧索引的数值最大
+#   将最大值保存进res
+
 
 def aa(nums, k):
     queue, res = deque(), []
@@ -13,6 +19,19 @@ def aa(nums, k):
             queue.pop()
         queue.append(nums[j])
         if i >= 0: res.append(queue[0])
+    return res
+
+
+def bb(nums, k):
+    queue, res = deque(), []
+    for i, num in enumerate(nums):
+        if queue and queue[0] == i - l:
+            queue.popleft()
+        while queue and nums[queue[-1]] < num:
+            queue.pop()
+        queue.append(i)
+        if i >= k-1:
+            res.append(nums[queue[0])
     return res
 
 
