@@ -3,6 +3,7 @@
 from collections import deque
 
 
+# 借助队列(先进先出)进行层序遍历
 def aa(root):
     if not root: return []
     res, queue = [], deque([root])

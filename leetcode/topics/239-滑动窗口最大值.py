@@ -25,7 +25,7 @@ def aa(nums, k):
 def bb(nums, k):
     queue, res = deque(), []
     for i, num in enumerate(nums):
-        if queue and queue[0] == i - l:
+        if queue and queue[0] == i - k:
             queue.popleft()
         while queue and nums[queue[-1]] < num:
             queue.pop()
