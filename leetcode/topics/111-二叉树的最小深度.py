@@ -3,6 +3,8 @@
 from collections import deque
 
 
+# 借助队列(先进先出)进行层序遍历, 当左右孩子都为空时, 说明到最底一层了
+# PS: 最小深度是从根节点到最近叶子节点的最短路径的节点数量, 注意是叶子节点, 左右孩子都为空的节点才是叶子节点!!!
 def aa(root):
     if not root: return 0
     res, queue = 1, deque([root])
