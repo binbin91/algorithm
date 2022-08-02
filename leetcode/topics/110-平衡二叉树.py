@@ -18,3 +18,23 @@ def aa(root):
         if right == -1: return -1
         return max(left, right)+1 if abs(left-right) <= 1 else -1
     return recur(root) >= 0
+
+
+# 迭代法
+de bb(root):
+   if not root: return True 
+   hp, stack = {}, [root]
+   while stack:
+       node = stack.pop()
+       if node: 
+           stack.append(node)
+           stack.append(None)
+	   if node.left: stack.append(node.left)
+	   if node.right: stack.append(node.right)
+       else:
+           rn = stack.pop()
+           l, r = hp.get(rn.left, 0) hp.get(rn.right, 0)
+           if abs(l - r) > 1:
+               return False
+           hp[rn] = 1 + max(l, r)
+   return True 

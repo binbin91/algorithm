@@ -3,6 +3,7 @@
 from collections import deque
 
 
+# 借助队列(先进先出)进行层序遍历, 层序遍历时记录最后一行第一个节点的数值即可
 def aa(root):
     if not root: return
     res, queue = 0, deque([root])    
