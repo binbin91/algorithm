@@ -14,14 +14,18 @@ def aa(root):
             cur = cur.left
         else:
             cur = stack.pop()
-            if pre is None: cnt = 1
-            elif pre.val == cur.val: cnt += 1
-            else: cnt = 1
-            if cnt == max_cnt: res.append(cur.val)
+            if pre is None: 
+                cnt = 1
+            elif pre.val == cur.val: 
+                cnt += 1
+            else: 
+                cnt = 1
+            if cnt == max_cnt: 
+                res.append(cur.val)
             if cnt > max_cnt: 
                 max_cnt = cnt
                 res = []
-                res.append(cur.val)
+                res.append(cur.val)  # 清空res数组, 确保res数值之前的元素都失效
             pre = cur
             cur = cur.right
     return res
