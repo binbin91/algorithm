@@ -28,5 +28,4 @@ class Solution(object):
             root.val += self.pre.val
             self.pre = root
             recur(root.left)
-        recur(root)
-        return root
+        return recur(root)
