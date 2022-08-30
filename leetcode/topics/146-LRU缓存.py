@@ -20,7 +20,7 @@
 #        3) 若key不在字典里, 则将新节点添加到末尾
 class ListNode(objbect):
     def __init__(self, key=None, value=None):
-        self.key, self.value, self.pre, self.next = key, value, None, None
+        self.key, self.val, self.pre, self.next = key, value, None, None
 
 
 class LRUCache(object):
